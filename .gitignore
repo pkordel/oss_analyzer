@@ -1,0 +1,4 @@
+.DS_Store
+db/tsunami.sqlite3
+log/*
+public/.DS_Store
