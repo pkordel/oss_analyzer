@@ -1,0 +1,38 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+# create_table "products", :force => true do |t|
+#   t.string  "type"
+#   t.string  "name"
+#   t.string  "manufacturer"
+#   t.integer "license"
+#   t.integer "support"
+#   t.boolean "oss",          :default => false
+# end
+
+one:
+  type: Webserver
+  name: MyString
+  manufacturer: MyString
+  license: 1
+  support: 1
+  
+two:
+  type: Os
+  name: MyString
+  manufacturer: MyString
+  license: 1
+  support: 1
+  
+oracle:
+  type: Database
+  name: Oracle
+  manufacturer: Oracle
+  license: 1
+  support: 1
+  
+mysql:
+  type: Database
+  name: MySQL
+  manufacturer: MySQL
+  license: 1
+  support: 1

@@ -1,0 +1,25 @@
+<h2>Listing Migrations</h2>
+
+<table class="sp">
+  <tr>
+    <th>Source</th>
+    <th>Destination</th>
+    <th style=text-align:right>Migration cost</th>
+    <th style=text-align:right>Savings per unit</th>
+    <th></th>
+    <th></th>
+  </tr>
+  
+<% for mapping in @mappings %>
+  <tr id="mappings">
+    <%= render :partial => 'mapping', :locals => { :mapping => mapping } %>
+  </tr>
+<% end %>
+  <tr id="mapping" style="display: none; border: 2px solid; background: #e0e0e0;">
+    <%= render :partial => "form" %>
+  </tr>
+</table>
+
+<br />
+
+<%= button_to_function "New Migration", toggle_form('show') %>

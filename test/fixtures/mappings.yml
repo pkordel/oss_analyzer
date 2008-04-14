@@ -1,0 +1,18 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+# create_table "mappings", :force => true do |t|
+#   t.integer "source_id"
+#   t.integer "destination_id"
+#   t.integer "migration_cost", :default => 0
+#   t.string  "name"
+# end
+
+one:
+  source: oracle
+  destination: mysql
+  migration_cost: 1
+  name: Oracle_to_MySQL
+two:
+  source: one
+  destination: two
+  migration_cost: 1
+  name: MyString

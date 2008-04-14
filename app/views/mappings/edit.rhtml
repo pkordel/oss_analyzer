@@ -1,0 +1,26 @@
+<h2>Editing Migration</h2>
+
+<%= error_messages_for :mapping %>
+
+<% form_for(:mapping, :url => mapping_path(@mapping), :html => { :method => :put }) do |f| %>
+  <p>
+    <b>Source</b><br />
+    <%= f.select :source_id, @sources  %>
+  </p>
+
+  <p>
+    <b>Destination</b><br />
+    <%= f.select :destination_id, @destinations  %>
+  </p>
+
+  <p>
+    <b>Migration cost</b><br />
+    <%= f.text_field :migration_cost, :size => 8 %>
+  </p>
+
+  <p>
+    <%= submit_tag "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', mappings_path %>

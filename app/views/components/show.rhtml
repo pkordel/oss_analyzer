@@ -1,0 +1,13 @@
+<p>
+  <b>Product:</b>
+  <%=h "#{@component.product.manufacturer} #{@component.product.name}" %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @component.class %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_system_sys_config_component_path(@user, @system, @sys_config, @component) %> |
+<%= link_to 'Back', user_system_sys_config_components_path(@user, @system, @sys_config) %>

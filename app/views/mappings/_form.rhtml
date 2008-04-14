@@ -1,0 +1,8 @@
+<% form_for(:mapping, :url => mappings_path, :style => "display: inline;") do |f| %>
+  <td><%= f.select :source_id, @sources  %></td>
+  <td><%= f.select :destination_id, @destinations  %></td>
+  <td><%= f.text_field :migration_cost, :size => 8 %></td>
+  <td></td>
+  <td><%= submit_tag "Create" %></td>
+  <td><%= button_to_function "Cancel", toggle_form('hide') %></td>
+<% end %>

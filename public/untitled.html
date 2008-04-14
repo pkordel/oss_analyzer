@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>untitled</title>
+	
+  <style type="text/css" media="screen">
+  /*LC = left column, RC = right column*/
+  body,
+  html {
+    margin:0;
+    padding:0;
+    background:#FFF;
+    color:#000;
+  }
+  body {
+    min-width:550px;  /* 2x LC width + RC width */
+  }
+  #header {
+    background:#ddd;
+  }
+  #nav {
+    background:#c99;
+  }
+  #container .column {
+    position: relative;
+    float: left;
+  }
+  #center {
+    background:#9c9;
+    width: 100%;
+  }
+  #left {
+    background:#79c;
+    width: 200px;          /* LC width */
+    right: 200px;          /* LC width */
+    margin-left: -100%;
+  }
+  #right {
+    background:#99c;
+    width: 150px;          /* RC width */
+    margin-right: -100%;  
+  }
+  #footer {
+    background:#cc9;
+    clear: both;
+  }
+  /*** IE6 Fix ***/
+  * html #left {
+    left: 150px;           /* RC width */
+  }
+  
+  
+  #main {
+    background:#9c9;
+    clear:both;
+    width:245px;
+  }
+  #sidebar-left {
+    background:#79c;
+    float:left;
+    width:245px;
+  }
+  #sidebar-right {
+    background:#99c;
+    float:right;
+    width:245px;
+  }
+  #nav ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+  #nav li{
+    display:inline;
+    margin:0;
+    padding:0;
+  }
+
+  #header h1 {
+    padding:5px;
+    margin:0;
+  }
+  #nav {
+    background:#c99;
+    padding:5px;
+  }
+  #main h2, #main h3, #main p {
+    padding:0 10px;
+  }
+  #sidebar-right ul {
+    margin-bottom:0;
+  }
+  #sidebar-right h3, #sidebar-right p {
+    padding:0 10px;
+  }
+  #footer p {
+    padding:5px;
+    margin:0;
+  }
+
+  </style>
+	
+</head>
+
+<body>
+
+
+      <div id="header"><h1>Document Heading</h1></div>
+      <div id="nav">
+          <ul>
+              <li><a href="#">Option 1</a></li>
+              <li><a href="#">Option 2</a></li>
+              ...
+          </ul>
+      </div>
+      <div id="container">
+        <div id="center">
+          <h2>Center</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
+        </div>
+        <div id="left">
+          <h3>Column 1</h3>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
+          <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            ...
+          </ul>
+        </div>
+        <div id="right">
+          <h3>Column 3</h3>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
+          <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            ...
+          </ul>
+        </div>
+      </div>
+      <div id="footer">
+          <p>Footer</p>
+      </div>
+
+
+</body>
+</html>

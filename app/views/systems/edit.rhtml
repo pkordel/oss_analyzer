@@ -1,0 +1,19 @@
+<h2>Editing System</h2>
+
+<%= error_messages_for :system %>
+<div class="form-wrap">
+  <% form_for(:system, :url => user_system_path(@user, @system), :html => { :method => :put }) do |f| %>
+    <%= render :partial => 'form', :locals => {:f => f} %>
+    <div id="footer">
+      <p><%= submit_tag "Update" %></p>
+    </div>
+  <% end %>
+</div>
+<div id="nav">
+  <p>
+    <%= link_to 'Back', user_systems_path %> | 
+    <%= link_to 'Edit Configuration', edit_user_system_sys_config_path(@user, @system, @system.sys_configs.first) %>
+  </p>
+  
+</div>
+

@@ -1,0 +1,2 @@
+class Middleware < Product
+end

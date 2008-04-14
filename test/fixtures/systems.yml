@@ -1,0 +1,50 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+# create_table "systems", :force => true do |t|
+#   t.string   "name"
+#   t.text     "description"
+#   t.datetime "created_at"
+#   t.datetime "updated_at"
+#   t.integer  "user_id"
+#   t.integer  "status",          :default => 0
+#   t.string   "system_type"
+#   t.string   "sla"
+#   t.string   "internal"
+#   t.integer  "user_count"
+#   t.datetime "eol"
+#   t.string   "sys_admin_name"
+#   t.string   "sys_admin_phone"
+#   t.string   "sys_admin_email"
+# end
+
+one:
+  user: quentin
+  name: MyString
+  description: MyText
+  created_at: 2007-11-27 15:37:30
+  updated_at: 2007-11-27 15:37:30
+  status: 25
+  system_type: Standard
+  sla: 99.99
+  internal: internal
+  user_count: 1
+  eol: 2008-11-27 15:37:30
+  sys_admin_name: Some Young Guy
+  sys_admin_phone: 867 5309
+  sys_admin_email: dont@mail.me
+  
+two:
+  user: quentin
+  name: MyString
+  description: MyText
+  created_at: 2007-11-27 15:37:30
+  updated_at: 2007-11-27 15:37:30
+  status: 0
+  system_type: Standard
+  sla: 99.99
+  internal: internal
+  user_count: 1
+  eol: 2008-11-27 15:37:30
+  sys_admin_name: Some Young Guy
+  sys_admin_phone: 867 5309
+  sys_admin_email: dont@mail.me

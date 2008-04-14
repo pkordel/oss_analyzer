@@ -1,0 +1,12 @@
+
+development:
+  adapter: sqlite3
+  database: db/tsunami.sqlite3
+  timeout: 5000
+
+test:
+  adapter: sqlite3
+  database: db/tsunami.sqlite3
+  timeout: 5000
+
+

@@ -1,0 +1,30 @@
+<h2>Listing My Systems</h2>
+
+<table class="sp">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Status</th>
+    <th>Registration date</th>
+    <th></th>
+    <th></th>
+  </tr>
+  
+<% for system in @systems %>
+  <tr>
+    <td><%= link_to h(system.name), user_system_path(@user, system) %></td>
+    <td><%=h truncate_string(system.description) %></td>
+    <td><%= "#{system.status} %" if system.status %></td>
+    <td><%= display_date system.created_at %></td>
+    <td><%= link_to 'Edit', edit_user_system_path(@user, system) %></td>
+    <td><%= link_to 'Delete', user_system_path(@user, system), :confirm => 'Are you sure?', 
+                                                                :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New System', new_user_system_path(@user) %>
+
+

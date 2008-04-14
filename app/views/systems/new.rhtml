@@ -1,0 +1,14 @@
+<h2>New System</h2>
+
+<%= error_messages_for :system %>
+<div class="form-wrap">
+  <% form_for(:system, :url => user_systems_path(@user)) do |f| %>
+    <%= render :partial => 'form', :locals => {:f => f} %>
+    <div id="footer">
+      <p><%= submit_tag "Next" %></p>
+    </div>
+  <% end %>
+</div>
+<div id="nav">
+  <%= link_to 'Back', user_systems_path %>
+</div>

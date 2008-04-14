@@ -1,0 +1,9 @@
+    <td><%=h product.manufacturer %></td>
+    <td><%=h product.name %></td>
+    <td><%=h product.class.name %></td>
+    <td style=text-align:right><%=h swedish_currency(product.license) %></td>
+    <td style=text-align:right><%=h swedish_currency(product.support) %></td>
+    <td style=text-align:center><%= product.oss? ? 'Yes' : 'No' %></td>
+    <td><%= link_to 'Edit', edit_product_path(product) %></td>
+    <td><%= link_to 'Delete', product_path(product), :confirm => 'Are you sure?', 
+                                                      :method => :delete %></td>

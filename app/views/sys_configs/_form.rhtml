@@ -1,0 +1,8 @@
+<% form_for(:component, :url => user_system_sys_config_components_path(@user, @system, @sys_config)) do |f| %>
+  <p>
+    <b>Component:</b> <%= f.select("product_id", @products) %>&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Quantity:</b> <%= f.text_field :quantity, :size => 3 %>&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= submit_tag "Create" %>&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= button_to_function "Cancel", toggle_form('hide') %>
+  </p>
+<% end %>

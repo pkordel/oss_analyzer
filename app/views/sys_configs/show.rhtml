@@ -1,0 +1,17 @@
+<p>
+  <b>System:</b>
+  <%=h @system.name %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @sys_config.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @sys_config.description %>
+</p>
+
+<%= link_to 'Edit', edit_user_system_sys_config_path(@user, @system, @sys_config) %> |
+<%= link_to 'Back', user_system_sys_configs_path %>

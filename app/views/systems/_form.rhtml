@@ -1,0 +1,55 @@
+  <div id="main">
+    <p>
+      <b>Name</b><br />
+      <%= f.text_field :name %>
+    </p>
+
+    <p>
+      <b>Description</b><br />
+      <%= f.text_area :description, :rows => '3', :cols => '27' %>
+    </p>
+  
+    <p>
+      <b>System type</b><br />
+      <%= f.select :system_type, ["Select", "Standard", "Bespoke", "Custom"] %>
+    </p>
+  
+    <p>
+      <b>SLA</b><br />
+      <%= f.select :sla, ["Select", "99.9", "99.99", "99.999", "Infinity"] %>
+    </p>
+  
+    <p>
+      <b>Internal</b> <%= f.radio_button :internal, :internal %>&nbsp;&nbsp;&nbsp;&nbsp;
+      <b>External</b> <%= f.radio_button :internal, :external %>
+    </p>
+  </div>
+  
+  <div id="sidebar">
+    <p>
+      <b>Number of users</b><br />
+      <%= f.text_field :user_count, :size => 8 %>
+    </p>
+  
+    <p>
+      <b>System end of life</b><br />
+      <%= f.date_select :eol, :start_year => 2007, 
+                              :use_month_numbers => true, 
+                              :order => [:year, :month, :day] %>
+    </p>
+  
+    <p>
+      <b>Contact name</b><br />
+      <%= f.text_field :sys_admin_name, :size => 20 %>
+    </p>
+  
+    <p>
+      <b>Contact phone</b><br />
+      <%= f.text_field :sys_admin_phone, :size => 20 %>
+    </p>
+  
+    <p>
+      <b>Contact email</b><br />
+      <%= f.text_field :sys_admin_email, :size => 20 %>
+    </p>
+  </div>

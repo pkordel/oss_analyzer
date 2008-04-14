@@ -1,0 +1,28 @@
+<p>
+  <b>Type:</b>
+  <%=h @product.class.name %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @product.name %>
+</p>
+
+<p>
+  <b>Manufacturer:</b>
+  <%=h @product.manufacturer %>
+</p>
+
+<p>
+  <b>License cost per unit:</b>
+  <%=h @product.license %>
+</p>
+
+<p>
+  <b>Support cost per unit:</b>
+  <%=h @product.support %>
+</p>
+
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

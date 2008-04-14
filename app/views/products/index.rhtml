@@ -1,0 +1,27 @@
+<h2><%= @title %></h2>
+
+<div id="table">
+
+<table class="sp">
+  <tr>
+    <th>Manufacturer</th>
+    <th>Product</th>
+    <th>Type</th>
+    <th>License cost <br />per unit</th>
+    <th>Support cost <br />per unit</th>
+    <th>Open source</th>
+    <th></th>
+    <th></th>
+  </tr>
+  
+<% for product in @products %>
+  <tr id="products">
+    <%= render :partial => 'product', :locals => { :product => product } %>
+  </tr>
+<% end %>
+  <tr id="product" style="display: none; border: 2px solid; background: #e0e0e0;"><%= render :partial => "form" %></tr>
+</table>
+</div>
+<br />
+
+<%= button_to_function "New Product", toggle_form('show') %>

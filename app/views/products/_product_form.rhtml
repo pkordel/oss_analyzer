@@ -1,0 +1,32 @@
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <b>Manufacturer</b><br />
+    <%= f.text_field :manufacturer %>
+  </p>
+  
+  <p>
+    <b>Open source</b> <%= f.check_box :oss %>
+  </p>
+  
+  <p>
+    <b>License cost</b><br />
+    <%= f.text_field :license %>
+  </p>
+  
+  <p>
+    <b>Support cost</b><br />
+    <%= f.text_field :support %>
+  </p>
+  <%- unless @product -%>
+  <p>
+    <b>Type</b><br />
+    <select id="product[type]" name="product[type]">
+      <option>Please select a product type</option>
+      <%= options_for_select Product::TYPES %>
+    </select>
+  </p>
+  <%- end -%>

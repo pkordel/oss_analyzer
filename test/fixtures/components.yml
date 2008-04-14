@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+# create_table "components", :force => true do |t|
+#   t.integer "product_id"
+#   t.integer "sys_config_id"
+#   t.integer "quantity"
+# end
+
+one:
+  product: one
+  sys_config: one
+  quantity: 1
+
+two:
+  product: one
+  sys_config: one
+  quantity: 1
+

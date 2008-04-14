@@ -1,0 +1,28 @@
+<h2>Listing Systems</h2>
+<input type="search" placeholder="Search">
+<table class="sp">
+  <tr>
+    <th>Name</th>
+    <th>Status</th>
+    <th>Owner</th>
+    <th>Registration date</th>
+    <th>Current cost</th>
+    <th>Potential savings</th>
+    <th>DP1</th>
+    <th></th>
+  </tr>
+  
+<% for system in @systems %>
+  <tr>
+    <td><%=h system.name %></td>
+    <td><%= "#{system.status} %" if system.status %> </td>
+    <td><%=h system.user.login if system.user %></td>
+    <td><%=h display_date(system.created_at) %></td>
+    <td style=text-align:right><%=h swedish_currency(system.sys_configs.first.total) %></td>
+    <td style=text-align:right><%=h swedish_currency(potential_savings(system)) %></td>
+    <td><%= link_to image_tag('icon_pdf.gif', :width => 18, :height => 16), 
+                    :action => :show_pdf, :id => system %></td>
+    <td><%= image_tag show_lamp(system), :size=> "16x16" %></td>
+  </tr>
+<% end %>
+</table>

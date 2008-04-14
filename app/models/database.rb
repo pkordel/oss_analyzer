@@ -1,0 +1,2 @@
+class Database < Product
+end

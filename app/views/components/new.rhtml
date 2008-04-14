@@ -1,0 +1,25 @@
+<h2>New Component</h2>
+
+<%= error_messages_for :component %>
+
+<% form_for(:component, :url => user_system_sys_config_components_path(@user, @system, @sys_config)) do |f| %>
+
+  <p>
+    <b>Product</b><br />
+    <%= f.text_field :product %>
+  </p>
+  
+  <p>
+    <b>Type</b><br />
+    <select id="component[type]" name="component[type]">
+      <option>Please select a component type</option>
+      <%= options_for_select Product::TYPES %>
+    </select>
+  </p>
+
+  <p>
+    <%= submit_tag "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', user_system_sys_config_components_path(@user, @system, @sys_config) %>

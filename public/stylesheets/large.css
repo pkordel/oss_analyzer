@@ -1,0 +1,10 @@
+@import "layout.css";
+
+p, table, ul, ol, ul, a, body {font-size: 13px !important;}
+box-small-border, .investor-main, .box-small-grey{font-size: 14px !important;}
+/* h2, h3{font-size: 20px !important;} */
+#nav-main a, .box-small-grey h3, .box-small-grey a, .news h3, h3.small2, h3.small, .box h4, .box h3, .bullets{font-size: 12px !important;}
+#nav-main li, .investor-main h2  {font-size: 15px !important;} 
+#nav-main LI UL LI A, #copyright, #siteinfo, #siteinfo tr td a {font-size: 12px !important;}
+.box {min-height:216px !important;}
+* html .box {height: 235px !important;}

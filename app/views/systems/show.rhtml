@@ -1,0 +1,54 @@
+
+<h3>System <%=h @system.name %></h3>
+
+<dl>
+  <dt><b>Description</b>
+    <dd><%=h @system.description %></dd>
+  </dt>
+  <dt><b>System type</b>
+    <dd><%=h @system.system_type %></dd>
+  </dt>
+  <dt><b>SLA</b>
+    <dd><%=h @system.sla %></dd>
+  </dt>
+  <dt><b>Usage</b>
+    <dd><%=h @system.internal %></dd>
+  </dt>
+  <dt><b>Number of users</b>
+    <dd><%=h @system.user_count %></dd>
+  </dt>
+  <dt><b>End of life</b>
+    <dd><%=h display_date(@system.eol) %></dd>
+  </dt>
+  <dt><b>Registration date</b>
+    <dd><%=h display_date(@system.created_at) %></dd>
+  </dt>
+  <dt><b>Configuration</b>
+    <%- for component in @components -%>
+    <dd><%=h "#{component.quantity} - #{component.product.manufacturer} #{component.product.name} (#{component.product.class.name})" %></dd>
+    <%- end -%>
+  </dt>
+  <dt><b>Total cost</b>
+    <dd><%= @total %></dd>
+  </dt>
+  
+  <dt>
+    <b>Contact name</b>
+    <dd><%=h @system.sys_admin_name %></dd>
+  </dt>
+  
+  <dt>
+    <b>Contact phone</b>
+    <dd><%=h @system.sys_admin_phone %></dd>
+  </dt>
+  
+  <dt>
+    <b>Contact email</b>
+    <dd><%=h @system.sys_admin_email %></dd>
+  </dt>
+  
+</dl>
+
+
+<%= link_to 'Edit', edit_user_system_path(@user, @system) %> |
+<%= link_to 'Back', user_systems_path %>

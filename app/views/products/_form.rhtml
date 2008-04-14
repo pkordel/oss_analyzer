@@ -1,0 +1,16 @@
+<% form_for(:product, :url => products_path, :style => "display: inline;") do |f| %>
+
+  <td><%= f.text_field :manufacturer, :size => 10 %></td>
+  <td><%= f.text_field :name, :size => 10 %></td>
+  <td>
+    <select id="product[type]" name="product[type]">
+      <option>Select</option>
+      <%= options_for_select Product::TYPES %>
+    </select>
+  </td>
+  <td><%= f.text_field :license, :size => 6 %></td>
+  <td><%= f.text_field :support, :size => 6 %></td>
+  <td><%= f.check_box :oss, {:checked => ('checked' if @type == 'true')} %></td>
+  <td><%= submit_tag "Create" %></td>
+  <td><%= button_to_function "Cancel", toggle_form('hide') %></td>
+<% end %>
