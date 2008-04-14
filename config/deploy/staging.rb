@@ -7,8 +7,10 @@ set :path, "/var/sites"
 set :checkout, "export"
 set :deploy_via,  :remote_cache
 
+set :scm, :git
+set :repository, "git://github.com/pkordel/oss_analyzer.git"
+set :branch, "origin/master"
 
-set :repository, "http://svn.redpill.se/#{application}/trunk"
 set :deploy_to, "#{path}/#{application}" 
 role :web, domain
 role :app, domain
