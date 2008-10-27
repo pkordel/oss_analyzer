@@ -2,14 +2,18 @@ set :application, "tsunami"
 set :domain, 'berkelium.redpill.se'
 
 set :path, "/var/sites"
-# set :rails_env, "staging"
+set :rails_env, "staging"
 
 set :checkout, "export"
 set :deploy_via,  :remote_cache
 
+ssh_options[:user]="deploy"
+ssh_options[:forward_agent] = true
+
 set :scm, :git
 set :repository, "git://github.com/pkordel/oss_analyzer.git"
-set :branch, "origin/master"
+set :branch, "master"
+set :scm_verbose, true
 
 set :deploy_to, "#{path}/#{application}" 
 role :web, domain
