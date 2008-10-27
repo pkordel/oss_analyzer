@@ -8,7 +8,6 @@ set :checkout, "export"
 set :deploy_via,  :remote_cache
 
 ssh_options[:user]="deploy"
-ssh_options[:forward_agent] = true
 
 set :scm, :git
 set :repository, "git://github.com/pkordel/oss_analyzer.git"
